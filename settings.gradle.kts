@@ -1,1 +1,1 @@
-rootProject.name = "idea-srs"
+rootProject.name = "srs"

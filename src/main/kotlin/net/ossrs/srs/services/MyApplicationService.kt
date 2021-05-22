@@ -1,6 +1,6 @@
-package net.ossrs.ideasrs.services
+package net.ossrs.srs.services
 
-import net.ossrs.ideasrs.MyBundle
+import net.ossrs.srs.MyBundle
 
 class MyApplicationService {
 

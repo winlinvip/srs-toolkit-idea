@@ -1,6 +1,6 @@
 <idea-plugin url="https://github.com/ossrs/idea-srs">
-    <id>net.ossrs.ideasrs</id>
-    <name>SRS server</name>
+    <id>net.ossrs.srs</id>
+    <name>srs</name>
     <vendor url="https://ossrs.net">ossrs</vendor>
 
     <!-- Product and plugin compatibility requirements -->
@@ -8,12 +8,12 @@
     <depends>com.intellij.modules.platform</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <applicationService serviceImplementation="net.ossrs.ideasrs.services.MyApplicationService"/>
-        <projectService serviceImplementation="net.ossrs.ideasrs.services.MyProjectService"/>
+        <applicationService serviceImplementation="net.ossrs.srs.services.MyApplicationService"/>
+        <projectService serviceImplementation="net.ossrs.srs.services.MyProjectService"/>
     </extensions>
 
     <applicationListeners>
-        <listener class="net.ossrs.ideasrs.listeners.MyProjectManagerListener"
+        <listener class="net.ossrs.srs.listeners.MyProjectManagerListener"
                   topic="com.intellij.openapi.project.ProjectManagerListener"/>
     </applicationListeners>
 </idea-plugin>
