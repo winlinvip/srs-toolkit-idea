@@ -3,6 +3,7 @@
 # srs-toolkit-idea Changelog
 
 ## [Unreleased]
+## [0.0.7]
 ### Changed
 - Change the pluginName to srs-toolkit-idea
 - Change the search name from "srs" to "srs server".
