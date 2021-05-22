@@ -3,6 +3,9 @@
 # srs-toolkit-idea Changelog
 
 ## [Unreleased]
+### Changed
+- Change logo to SRS.
+
 ## [0.0.7]
 ### Changed
 - Change the pluginName to srs-toolkit-idea
