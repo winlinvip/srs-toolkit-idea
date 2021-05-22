@@ -1,6 +1,6 @@
-package com.github.winlinvip.ideasrs.listeners
+package net.ossrs.ideasrs.listeners
 
-import com.github.winlinvip.ideasrs.services.MyProjectService
+import net.ossrs.ideasrs.services.MyProjectService
 import com.intellij.openapi.components.service
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.project.ProjectManagerListener

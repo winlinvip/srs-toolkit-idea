@@ -1,4 +1,4 @@
-package com.github.winlinvip.ideasrs
+package net.ossrs.ideasrs
 
 import com.intellij.AbstractBundle
 import org.jetbrains.annotations.NonNls

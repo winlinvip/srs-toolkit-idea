@@ -1,19 +1,19 @@
-<idea-plugin>
-    <id>com.github.winlinvip.ideasrs</id>
-    <name>idea-srs</name>
-    <vendor>winlinvip</vendor>
+<idea-plugin url="https://github.com/ossrs/idea-srs">
+    <id>net.ossrs.ideasrs</id>
+    <name>SRS server</name>
+    <vendor url="https://ossrs.net">ossrs</vendor>
 
     <!-- Product and plugin compatibility requirements -->
     <!-- https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
     <depends>com.intellij.modules.platform</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <applicationService serviceImplementation="com.github.winlinvip.ideasrs.services.MyApplicationService"/>
-        <projectService serviceImplementation="com.github.winlinvip.ideasrs.services.MyProjectService"/>
+        <applicationService serviceImplementation="net.ossrs.ideasrs.services.MyApplicationService"/>
+        <projectService serviceImplementation="net.ossrs.ideasrs.services.MyProjectService"/>
     </extensions>
 
     <applicationListeners>
-        <listener class="com.github.winlinvip.ideasrs.listeners.MyProjectManagerListener"
+        <listener class="net.ossrs.ideasrs.listeners.MyProjectManagerListener"
                   topic="com.intellij.openapi.project.ProjectManagerListener"/>
     </applicationListeners>
 </idea-plugin>

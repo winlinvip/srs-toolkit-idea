@@ -1,6 +1,6 @@
-package com.github.winlinvip.ideasrs.services
+package net.ossrs.ideasrs.services
 
-import com.github.winlinvip.ideasrs.MyBundle
+import net.ossrs.ideasrs.MyBundle
 
 class MyApplicationService {
 
