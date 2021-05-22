@@ -3,6 +3,9 @@
 # idea-srs Changelog
 
 ## [Unreleased]
+### Changed
+- Change the search name from "srs" to "srs server".
+
 ## [0.0.6]
 ### Added
 - Add CHANGELOG.
