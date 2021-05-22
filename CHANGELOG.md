@@ -1,9 +1,10 @@
 <!-- Keep a Changelog guide -> https://keepachangelog.com -->
 
-# idea-srs Changelog
+# srs-toolkit-idea Changelog
 
 ## [Unreleased]
 ### Changed
+- Change the pluginName to srs-toolkit-idea
 - Change the search name from "srs" to "srs server".
 
 ## [0.0.6]

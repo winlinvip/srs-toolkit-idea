@@ -1,6 +1,6 @@
-<idea-plugin url="https://github.com/ossrs/idea-srs">
+<idea-plugin url="https://github.com/ossrs/srs-toolkit-idea">
     <id>net.ossrs.ideasrs</id>
-    <name>SRS server</name>
+    <name>SRS Toolkit</name>
     <vendor url="https://ossrs.net">ossrs</vendor>
 
     <!-- Product and plugin compatibility requirements -->

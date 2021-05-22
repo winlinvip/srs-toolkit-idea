@@ -1,13 +1,13 @@
-# idea-srs
+# SRS Toolkit for IDEA
 
-![Build](https://github.com/ossrs/idea-srs/workflows/Build/badge.svg)
+![Build](https://github.com/ossrs/srs-toolkit-idea/workflows/Build/badge.svg)
 [![Version](https://img.shields.io/jetbrains/plugin/v/16837.svg)](https://plugins.jetbrains.com/plugin/16837)
 [![Downloads](https://img.shields.io/jetbrains/plugin/d/16837.svg)](https://plugins.jetbrains.com/plugin/16837)
 
 <!-- Plugin description -->
 
-Supports the development of [SRS](https://github.com/ossrs/srs) server applications 
-with IntelliJ IDEA. 
+SRS Toolkit for IDEA is a plugin for JetBrains IDEs that make it easier to write applications built 
+on [SRS](https://github.com/ossrs/srs) server. 
 
 * Download the source code of SRS, or docker images.
 * Build SRS from source code, for macOS and Linux only.
@@ -21,12 +21,12 @@ and realtime video server, supports RTMP/WebRTC/HLS/HTTP-FLV/SRT/GB28181.
 
 - Using IDE built-in plugin system:
   
-  <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>Marketplace</kbd> > <kbd>Search for "srs server"</kbd> >
+  <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>Marketplace</kbd> > <kbd>Search for "srs toolkit"</kbd> >
   <kbd>Install Plugin</kbd>
   
 - Manually:
 
-  Download the [latest release](https://github.com/ossrs/idea-srs/releases/latest) and install it manually using
+  Download the [latest release](https://github.com/ossrs/srs-toolkit-idea/releases/latest) and install it manually using
   <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>⚙️</kbd> > <kbd>Install plugin from disk...</kbd>
 
 Winlin 2021.05
