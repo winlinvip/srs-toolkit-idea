@@ -3,6 +3,7 @@
 # idea-srs Changelog
 
 ## [Unreleased]
+## [0.0.6]
 ### Added
 - Add CHANGELOG.
 - Change the name of plugin.xml to SRS server.
