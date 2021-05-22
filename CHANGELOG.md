@@ -3,6 +3,7 @@
 # srs-toolkit-idea Changelog
 
 ## [Unreleased]
+## [0.0.8]
 ### Changed
 - Change logo to SRS.
 
