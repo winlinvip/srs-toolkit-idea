@@ -3,6 +3,9 @@
 # srs-toolkit-idea Changelog
 
 ## [Unreleased]
+### Added
+- Add date to release header.
+
 ## [0.0.8]
 ### Changed
 - Change logo to SRS.
