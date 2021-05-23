@@ -11,8 +11,8 @@ on [SRS](https://github.com/ossrs/srs) server.
 
 <p></p>
 
-> Note: [SRS](https://github.com/ossrs/srs) is a simple, high efficiency
-and realtime video server, supports RTMP/WebRTC/HLS/HTTP-FLV/SRT/GB28181.<br/>
+[SRS](https://github.com/ossrs/srs) is a simple, high efficiency and realtime video server, 
+supports RTMP/WebRTC/HLS/HTTP-FLV/SRT/GB28181.
 
 <p></p>
 

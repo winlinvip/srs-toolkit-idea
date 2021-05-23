@@ -1,7 +1,7 @@
 <idea-plugin url="https://github.com/ossrs/srs-toolkit-idea">
     <id>net.ossrs.ideasrs</id>
     <name>SRS Toolkit</name>
-    <vendor url="https://ossrs.net">ossrs</vendor>
+    <vendor url="https://ossrs.net">OSSRS</vendor>
 
     <!-- Product and plugin compatibility requirements -->
     <!-- https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
