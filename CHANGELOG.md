@@ -3,6 +3,7 @@
 # srs-toolkit-idea Changelog
 
 ## [Unreleased]
+## [0.0.10] - 2021-05-23
 ### Changed
 - Change vendor to OSSRS.
 
