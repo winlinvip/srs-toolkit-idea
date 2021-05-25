@@ -9,17 +9,13 @@
 SRS Toolkit for IDEA is a plugin for JetBrains IDEs that make it easier to write applications built 
 on [SRS](https://github.com/ossrs/srs) server.
 
-<p></p>
-
 [SRS](https://github.com/ossrs/srs) is a simple, high efficiency and realtime video server, 
 supports RTMP/WebRTC/HLS/HTTP-FLV/SRT/GB28181.
 
-<p></p>
+## Features
 
-**Features:**
-
-* Download the source code of SRS, or docker images.
-* Build SRS from source code, for macOS and Linux only.
+1. Download the source code of SRS, or docker images.
+2. Build SRS from source code, for macOS and Linux only.
 
 <!-- Plugin description end -->
 
