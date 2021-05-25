@@ -3,6 +3,7 @@
 # srs-toolkit-idea Changelog
 
 ## [Unreleased]
+## [0.0.11] - 2021-05-25
 ### Changed
 - Change build to util 211.
 
