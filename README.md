@@ -6,6 +6,10 @@
 
 <!-- Plugin description -->
 
+**还在开发中，还不可用，请稍等！！！**
+
+**Not release yet, not available, please wait!!!**
+
 SRS Toolkit for IDEA is a plugin for JetBrains IDEs that make it easier to write applications built 
 on [SRS](https://github.com/ossrs/srs) server.
 
