@@ -3,6 +3,7 @@
 # srs-toolkit-idea Changelog
 
 ## [Unreleased]
+## [0.0.12] - 2021-05-30
 ### Fixed
 - Change the state to develop, not released.
 
