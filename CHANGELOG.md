@@ -3,11 +3,12 @@
 # srs-toolkit-idea Changelog
 
 ## [Unreleased]
-## [0.0.12] - 2021-05-30
-### Fixed
-- Change the state to develop, not released.
+### Removed
+- Remove the pluginUntilBuild from gradle.properties
 
 ## [0.0.11] - 2021-05-25
+### Fixed
+- Change the state to develop, not released.
 ### Changed
 - Change build to util 211.
 - Change vendor to OSSRS.
