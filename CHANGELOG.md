@@ -3,6 +3,7 @@
 # srs-toolkit-idea Changelog
 
 ## [Unreleased]
+## [0.0.13] - 2021-06-06
 ### CHANGED
 - Refine LICENSE with http://spdx.org/licenses/
 ### Added
