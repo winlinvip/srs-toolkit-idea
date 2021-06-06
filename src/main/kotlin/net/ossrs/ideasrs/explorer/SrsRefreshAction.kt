@@ -7,9 +7,9 @@ import com.intellij.icons.AllIcons
 import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent
 
-import net.ossrs.ideasrs.MyBundle
+import net.ossrs.ideasrs.SrsBundle
 
-class SrsRefreshAction(text: String = MyBundle.message("settings.refresh.description")) :
+class SrsRefreshAction(text: String = SrsBundle.message("settings.refresh.description")) :
     AnAction(text, null, AllIcons.Actions.Refresh) {
     override fun actionPerformed(e: AnActionEvent) {
         TODO("Not yet implemented")

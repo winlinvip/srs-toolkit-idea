@@ -3,11 +3,11 @@
 
 package net.ossrs.ideasrs.services
 
-import net.ossrs.ideasrs.MyBundle
+import net.ossrs.ideasrs.SrsBundle
 
 class MyApplicationService {
 
     init {
-        println(MyBundle.message("applicationService"))
+        println(SrsBundle.message("applicationService"))
     }
 }

@@ -4,11 +4,11 @@
 package net.ossrs.ideasrs.services
 
 import com.intellij.openapi.project.Project
-import net.ossrs.ideasrs.MyBundle
+import net.ossrs.ideasrs.SrsBundle
 
 class MyProjectService(project: Project) {
 
     init {
-        println(MyBundle.message("projectService", project.name))
+        println(SrsBundle.message("projectService", project.name))
     }
 }

@@ -14,7 +14,7 @@ import com.intellij.openapi.wm.ToolWindowFactory
 import com.intellij.ui.components.panels.NonOpaquePanel
 import com.intellij.util.ui.UIUtil
 
-import net.ossrs.ideasrs.MyBundle
+import net.ossrs.ideasrs.SrsBundle
 
 class SrsExplorerFactory : ToolWindowFactory, DumbAware {
     override fun createToolWindowContent(project: Project, toolWindow: ToolWindow) {
@@ -33,7 +33,7 @@ class SrsExplorerFactory : ToolWindowFactory, DumbAware {
     }
 
     override fun init(toolWindow: ToolWindow) {
-        toolWindow.stripeTitle = MyBundle.message("explorer.title")
+        toolWindow.stripeTitle = SrsBundle.message("explorer.title")
     }
 }
 

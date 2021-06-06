@@ -3,6 +3,8 @@
 # srs-toolkit-idea Changelog
 
 ## [Unreleased]
+### CHANGED
+- Rename MyBundle to SrsBundle.
 ### Added
 - Create tree view for explorer.
 - Add refresh SRS connection.
