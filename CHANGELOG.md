@@ -4,7 +4,6 @@
 
 ## [Unreleased]
 ### CHANGED
-- Set sameSinceUntilBuild to true.
 - Rename MyBundle to SrsBundle.
 - Extract SrsExplorerToolWindow to file.
 ### Added

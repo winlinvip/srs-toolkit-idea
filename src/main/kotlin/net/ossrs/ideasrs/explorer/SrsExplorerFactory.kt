@@ -14,8 +14,8 @@ import net.ossrs.ideasrs.SrsBundle
 class SrsExplorerFactory : ToolWindowFactory, DumbAware {
     override fun createToolWindowContent(project: Project, toolWindow: ToolWindow) {
         // Content for SRS explorer.
-        var explorer = SrsExplorerToolWindow.getInstance(project)
-        var content = toolWindow.contentManager.factory.createContent(explorer, null, false)
+        val explorer = SrsExplorerToolWindow.getInstance(project)
+        val content = toolWindow.contentManager.factory.createContent(explorer, null, false)
         toolWindow.contentManager.addContent(content)
 
         // The help icon on SRS explorer.

@@ -10,7 +10,7 @@ import com.intellij.openapi.ui.SimpleToolWindowPanel
 import com.intellij.ui.components.panels.NonOpaquePanel
 import com.intellij.util.ui.UIUtil
 
-class SrsExplorerToolWindow(project: Project): SimpleToolWindowPanel(true, true), Disposable {
+class SrsExplorerToolWindow(project: Project) : SimpleToolWindowPanel(true, true), Disposable {
     init {
         background = UIUtil.getTreeBackground()
         setContent(NonOpaquePanel())
