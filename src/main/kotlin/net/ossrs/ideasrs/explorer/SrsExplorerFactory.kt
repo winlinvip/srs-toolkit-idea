@@ -1,3 +1,6 @@
+// Copyright (c) 2021 Winlin
+// SPDX-License-Identifier: MIT
+
 package net.ossrs.ideasrs.explorer
 
 import com.intellij.openapi.project.DumbAware

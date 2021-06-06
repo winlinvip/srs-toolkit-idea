@@ -3,6 +3,8 @@
 # srs-toolkit-idea Changelog
 
 ## [Unreleased]
+### CHANGED
+- Refine LICENSE with http://spdx.org/licenses/
 ### Added
 - Add SrsExplorer tool window.
 

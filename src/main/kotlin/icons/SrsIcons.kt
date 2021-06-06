@@ -1,3 +1,6 @@
+// Copyright (c) 2021 Winlin
+// SPDX-License-Identifier: MIT
+
 package icons
 
 import com.intellij.openapi.util.IconLoader

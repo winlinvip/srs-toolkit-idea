@@ -1,3 +1,6 @@
+// Copyright (c) 2021 Winlin
+// SPDX-License-Identifier: MIT
+
 import io.gitlab.arturbosch.detekt.Detekt
 import org.jetbrains.changelog.closure
 import org.jetbrains.changelog.date
