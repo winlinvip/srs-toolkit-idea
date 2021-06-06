@@ -7,6 +7,7 @@
 - Refine LICENSE with http://spdx.org/licenses/
 ### Added
 - Add SrsExplorer tool window.
+- Add WebHelpProvider for explorer window.
 
 ## [0.0.11] - 2021-05-25
 ### Fixed

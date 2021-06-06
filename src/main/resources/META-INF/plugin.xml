@@ -10,8 +10,11 @@
     <extensions defaultExtensionNs="com.intellij">
         <applicationService serviceImplementation="net.ossrs.ideasrs.services.MyApplicationService"/>
         <projectService serviceImplementation="net.ossrs.ideasrs.services.MyProjectService"/>
+        <!--SRS explorer is a tool window-->
         <toolWindow id="SRS Explorer" anchor="left" secondary="true" icon="SrsIcons.Logos.SRS"
             factoryClass="net.ossrs.ideasrs.explorer.SrsExplorerFactory"/>
+        <!--For help ID translation-->
+        <webHelpProvider implementation="net.ossrs.ideasrs.explorer.SrsHelpIdTranslator"/>
     </extensions>
 
     <applicationListeners>

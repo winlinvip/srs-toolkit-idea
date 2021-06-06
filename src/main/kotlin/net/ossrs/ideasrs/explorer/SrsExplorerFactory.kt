@@ -10,6 +10,6 @@ import com.intellij.openapi.wm.ToolWindowFactory
 
 class SrsExplorerFactory : ToolWindowFactory, DumbAware {
     override fun createToolWindowContent(project: Project, toolWindow: ToolWindow) {
-        TODO("Not yet implemented")
+        toolWindow.helpId = SrsHelpIds.EXPLORER_WINDOW.id
     }
 }
