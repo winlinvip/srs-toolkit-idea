@@ -17,6 +17,7 @@ class SrsExplorerToolWindow(project: Project) : SimpleToolWindowPanel(true, true
     }
 
     override fun dispose() {
+        TODO("Not yet implemented")
     }
 
     companion object {
