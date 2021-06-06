@@ -42,7 +42,11 @@ intellij {
     version = properties("platformVersion")
     type = properties("platformType")
     downloadSources = properties("platformDownloadSources").toBoolean()
-    updateSinceUntilBuild = true
+
+    // We use an "open" util value for EAP plugin, which only set the since
+    // see https://github.com/JetBrains/gradle-intellij-plugin#building-properties
+    //updateSinceUntilBuild = true
+    sameSinceUntilBuild = true
 
     // Plugin Dependencies. Uses `platformPlugins` property from the gradle.properties file.
     setPlugins(*properties("platformPlugins").split(',').map(String::trim).filter(String::isNotEmpty).toTypedArray())

@@ -4,8 +4,12 @@
 
 ## [Unreleased]
 ### CHANGED
+- Set sameSinceUntilBuild to true.
 - Rename MyBundle to SrsBundle.
+- Extract SrsExplorerToolWindow to file.
 ### Added
+- Add configuration 'Run Plugin(zh)' for localization.
+- Add SrsBundle_zh.properties for localization.
 - Create tree view for explorer.
 - Add refresh SRS connection.
 
