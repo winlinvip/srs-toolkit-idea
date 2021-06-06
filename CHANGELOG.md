@@ -3,6 +3,10 @@
 # srs-toolkit-idea Changelog
 
 ## [Unreleased]
+### Added
+- Create tree view for explorer.
+- Add refresh SRS connection.
+
 ## [0.0.13] - 2021-06-06
 ### CHANGED
 - Refine LICENSE with http://spdx.org/licenses/

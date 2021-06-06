@@ -11,11 +11,17 @@
         <applicationService serviceImplementation="net.ossrs.ideasrs.services.MyApplicationService"/>
         <projectService serviceImplementation="net.ossrs.ideasrs.services.MyProjectService"/>
         <!--SRS explorer is a tool window-->
-        <toolWindow id="SRS Explorer" anchor="left" secondary="true" icon="SrsIcons.Logos.SRS"
-            factoryClass="net.ossrs.ideasrs.explorer.SrsExplorerFactory"/>
+        <projectService serviceImplementation="net.ossrs.ideasrs.explorer.SrsExplorerToolWindow"/>
+        <toolWindow id="srs.explorer" anchor="left" secondary="true"
+            factoryClass="net.ossrs.ideasrs.explorer.SrsExplorerFactory"
+            icon="SrsIcons.Logos.SRS"/>
         <!--For help ID translation-->
         <webHelpProvider implementation="net.ossrs.ideasrs.explorer.SrsHelpIdTranslator"/>
     </extensions>
+
+    <actions>
+        <action class="net.ossrs.ideasrs.explorer.SrsRefreshAction" id="srs.settings.refresh"/>
+    </actions>
 
     <applicationListeners>
         <listener class="net.ossrs.ideasrs.listeners.MyProjectManagerListener"
