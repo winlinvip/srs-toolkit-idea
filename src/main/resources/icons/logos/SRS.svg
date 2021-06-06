@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="13px" height="13px" viewBox="0 0 2048 2048">
+	<circle fill-opacity="0" r="896" cx="1024" cy="1024" fill="#40b6e0"></circle>
+	<g transform="scale(1)"><path fill-opacity="0.7" transform="translate(409.6, 1556) rotate(180) scale(-1, 1)" fill="#d51619" d="M973 1081v-180q-79 46 -159 69t-163 23q-125 0 -186.5 -40.5t-61.5 -123.5q0 -75 46 -112t229 -72l74 -14q137 -26 207.5 -104t70.5 -203q0 -166 -118 -259.5t-328 -93.5q-83 0 -174 17.5t-197 52.5v190q103 -53 197 -79.5t178 -26.5q122 0 189 49.5t67 138.5 q0 128 -245 177l-8 2l-69 14q-159 31 -232 104.5t-73 200.5q0 161 109 248.5t311 87.5q90 0 173 -16.5t163 -49.5z"></path></g>
+</svg>
