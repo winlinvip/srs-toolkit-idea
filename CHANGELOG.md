@@ -3,6 +3,7 @@
 # srs-toolkit-idea Changelog
 
 ## [Unreleased]
+## [0.0.14] - 2021-06-06
 ### CHANGED
 - Rename MyBundle to SrsBundle.
 - Extract SrsExplorerToolWindow to file.
