@@ -6,7 +6,6 @@ package net.ossrs.ideasrs.explorer
 import com.intellij.icons.AllIcons
 import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent
-
 import net.ossrs.ideasrs.SrsBundle
 
 class SrsRefreshAction(text: String = SrsBundle.message("settings.refresh.description")) :

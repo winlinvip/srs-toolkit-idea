@@ -8,7 +8,6 @@ import com.intellij.openapi.project.DumbAware
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.wm.ToolWindow
 import com.intellij.openapi.wm.ToolWindowFactory
-
 import net.ossrs.ideasrs.SrsBundle
 
 class SrsExplorerFactory : ToolWindowFactory, DumbAware {
@@ -22,9 +21,11 @@ class SrsExplorerFactory : ToolWindowFactory, DumbAware {
         toolWindow.helpId = SrsHelpIds.EXPLORER_WINDOW.id
 
         // Set the actions.
-        toolWindow.setTitleActions(listOf(
-            ActionManager.getInstance().getAction("srs.settings.refresh")
-        ))
+        toolWindow.setTitleActions(
+            listOf(
+                ActionManager.getInstance().getAction("srs.settings.refresh")
+            )
+        )
     }
 
     override fun init(toolWindow: ToolWindow) {
