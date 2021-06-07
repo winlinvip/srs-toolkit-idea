@@ -29,8 +29,10 @@
 
     <!--For actions-->
     <actions>
+        <!--Refresh action for SRS explorer-->
         <action class="net.ossrs.ideasrs.explorer.SrsRefreshAction" id="srs.settings.refresh"/>
 
+        <!--Actions for SRS server node-->
         <group id="net.ossrs.ideasrs.explorer.srs" popup="false" compact="false">
             <action id="srs.create.server" class="net.ossrs.ideasrs.explorer.SrsCreateServerAction"/>
         </group>
