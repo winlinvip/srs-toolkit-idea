@@ -9,8 +9,6 @@
 
     <!--For extensions defined by intellij-->
     <extensions defaultExtensionNs="com.intellij">
-        <applicationService serviceImplementation="net.ossrs.ideasrs.services.MyApplicationService"/>
-        <projectService serviceImplementation="net.ossrs.ideasrs.services.MyProjectService"/>
         <!--SRS explorer is a tool window-->
         <projectService serviceImplementation="net.ossrs.ideasrs.explorer.SrsExplorerToolWindow"/>
         <toolWindow id="srs.explorer" anchor="left" secondary="true"
@@ -37,9 +35,4 @@
             <action id="srs.create.server" class="net.ossrs.ideasrs.explorer.SrsCreateServerAction"/>
         </group>
     </actions>
-
-    <applicationListeners>
-        <listener class="net.ossrs.ideasrs.listeners.MyProjectManagerListener"
-                  topic="com.intellij.openapi.project.ProjectManagerListener"/>
-    </applicationListeners>
 </idea-plugin>

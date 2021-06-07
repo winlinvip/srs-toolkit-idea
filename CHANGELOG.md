@@ -3,6 +3,8 @@
 # srs-toolkit-idea Changelog
 
 ## [Unreleased]
+### Removed
+- Eliminate the unused listeners and services.
 ### Added
 - Add create SRS server dialog.
 
