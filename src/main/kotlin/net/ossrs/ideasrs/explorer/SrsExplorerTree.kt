@@ -8,11 +8,15 @@ import com.intellij.ide.projectView.TreeStructureProvider
 import com.intellij.ide.projectView.ViewSettings
 import com.intellij.ide.util.treeView.AbstractTreeNode
 import com.intellij.ide.util.treeView.AbstractTreeStructureBase
+import com.intellij.ide.util.treeView.NodeDescriptor
+import com.intellij.ide.util.treeView.NodeRenderer
 import com.intellij.openapi.extensions.ExtensionPointName
 import com.intellij.openapi.project.Project
 import com.intellij.ui.SimpleTextAttributes
 import net.ossrs.ideasrs.SrsBundle
 import javax.swing.Icon
+import javax.swing.JTree
+import javax.swing.tree.DefaultMutableTreeNode
 
 class SrsExplorerTreeModel(project: Project) : AbstractTreeStructureBase(project) {
     override fun getProviders(): List<TreeStructureProvider>? {
@@ -34,6 +38,23 @@ class SrsTreeStructureProvider : TreeStructureProvider {
         settings: ViewSettings?
     ): MutableCollection<AbstractTreeNode<*>> {
         return children.sortedWith(compareBy(String.CASE_INSENSITIVE_ORDER) { it.toString() }).toMutableList()
+    }
+}
+
+class SrsTreeCellRenderer : NodeRenderer() {
+    override fun customizeCellRenderer(
+        tree: JTree,
+        value: Any?,
+        selected: Boolean,
+        expanded: Boolean,
+        leaf: Boolean,
+        row: Int,
+        hasFocus: Boolean
+    ) {
+        super.customizeCellRenderer(tree, value, selected, expanded, leaf, row, hasFocus)
+        if (value is DefaultMutableTreeNode && value.userObject is NodeDescriptor<*>) {
+            icon = (value.userObject as NodeDescriptor<*>).icon
+        }
     }
 }
 
