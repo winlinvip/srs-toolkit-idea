@@ -17,12 +17,13 @@ class SrsExplorerServiceSRS : SrsExplorerService {
 }
 
 class SrsExplorerNodeSRS(project: Project, service: SrsExplorerServiceSRS) :
-    SrsExplorerNode<SrsExplorerService>(project, service, null) {
+    SrsExplorerNode<SrsExplorerService>(project, service, null), SrsResourceActionNode {
     override fun displayName(): String = SrsBundle.message("explorer.node.srs")
     override fun isAlwaysShowPlus(): Boolean = true
     override fun getChildren(): List<SrsExplorerNode<*>> {
         return emptyList()
     }
+    override fun actionGroupName() = "net.ossrs.ideasrs.explorer.srs"
 }
 
 class SrsExplorerServiceFFmpeg : SrsExplorerService {

@@ -89,3 +89,7 @@ abstract class SrsExplorerNode<T : Any>(val nodeProject: Project, value: T, priv
 
     override fun toString(): String = displayName()
 }
+
+interface SrsResourceActionNode {
+    fun actionGroupName(): String
+}
