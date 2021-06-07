@@ -3,6 +3,7 @@
 # srs-toolkit-idea Changelog
 
 ## [Unreleased]
+## [0.0.15] - 2021-06-07
 ### Added
 - Explorer service and node.
 ### Changed
