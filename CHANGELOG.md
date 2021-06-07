@@ -3,6 +3,9 @@
 # srs-toolkit-idea Changelog
 
 ## [Unreleased]
+### CHANGED
+- Refine file names.
+
 ## [0.0.14] - 2021-06-06
 ### CHANGED
 - Rename MyBundle to SrsBundle.
