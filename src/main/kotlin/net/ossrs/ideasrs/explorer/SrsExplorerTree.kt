@@ -13,7 +13,6 @@ import com.intellij.ide.util.treeView.NodeRenderer
 import com.intellij.openapi.extensions.ExtensionPointName
 import com.intellij.openapi.project.Project
 import com.intellij.ui.SimpleTextAttributes
-import net.ossrs.ideasrs.SrsBundle
 import javax.swing.Icon
 import javax.swing.JTree
 import javax.swing.tree.DefaultMutableTreeNode
@@ -89,22 +88,4 @@ abstract class SrsExplorerNode<T : Any>(val nodeProject: Project, value: T, priv
     open fun onDoubleClick() {}
 
     override fun toString(): String = displayName()
-}
-
-class SrsExplorerNodeSRS(project: Project, service: SrsExplorerServiceSRS) :
-    SrsExplorerNode<SrsExplorerService>(project, service, null) {
-    override fun displayName(): String = SrsBundle.message("explorer.node.srs")
-    override fun isAlwaysShowPlus(): Boolean = true
-    override fun getChildren(): List<SrsExplorerNode<*>> {
-        return emptyList()
-    }
-}
-
-class SrsExplorerNodeFFmpeg(project: Project, service: SrsExplorerServiceFFmpeg) :
-    SrsExplorerNode<SrsExplorerService>(project, service, null) {
-    override fun displayName(): String = SrsBundle.message("explorer.node.ffmpeg")
-    override fun isAlwaysShowPlus(): Boolean = true
-    override fun getChildren(): List<SrsExplorerNode<*>> {
-        return emptyList()
-    }
 }

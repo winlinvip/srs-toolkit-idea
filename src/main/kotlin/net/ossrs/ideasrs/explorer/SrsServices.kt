@@ -4,6 +4,7 @@
 package net.ossrs.ideasrs.explorer
 
 import com.intellij.openapi.project.Project
+import net.ossrs.ideasrs.SrsBundle
 
 interface SrsExplorerService {
     val serviceId: String
@@ -15,7 +16,25 @@ class SrsExplorerServiceSRS : SrsExplorerService {
     override fun buildNode(project: Project) = SrsExplorerNodeSRS(project, this)
 }
 
+class SrsExplorerNodeSRS(project: Project, service: SrsExplorerServiceSRS) :
+    SrsExplorerNode<SrsExplorerService>(project, service, null) {
+    override fun displayName(): String = SrsBundle.message("explorer.node.srs")
+    override fun isAlwaysShowPlus(): Boolean = true
+    override fun getChildren(): List<SrsExplorerNode<*>> {
+        return emptyList()
+    }
+}
+
 class SrsExplorerServiceFFmpeg : SrsExplorerService {
     override val serviceId: String = "ffmpeg"
     override fun buildNode(project: Project) = SrsExplorerNodeFFmpeg(project, this)
+}
+
+class SrsExplorerNodeFFmpeg(project: Project, service: SrsExplorerServiceFFmpeg) :
+    SrsExplorerNode<SrsExplorerService>(project, service, null) {
+    override fun displayName(): String = SrsBundle.message("explorer.node.ffmpeg")
+    override fun isAlwaysShowPlus(): Boolean = true
+    override fun getChildren(): List<SrsExplorerNode<*>> {
+        return emptyList()
+    }
 }
