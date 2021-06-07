@@ -83,11 +83,12 @@ class SrsExplorerToolWindow(project: Project) : SimpleToolWindowPanel(true, true
 
                     val totalActions = mutableListOf<AnAction>()
 
-                    (actionGroupName?.let { actionManager.getAction(it) } as? ActionGroup)?.let { totalActions.addAll(it.getChildren(null)) }
+                    val actionGroup = actionGroupName?.let { actionManager.getAction(it) } as? ActionGroup
+                    actionGroup?.let { totalActions.addAll(it.getChildren(null)) }
 
-                    val actionGroup = DefaultActionGroup(totalActions)
-                    if (actionGroup.childrenCount > 0) {
-                        val popupMenu = actionManager.createActionPopupMenu(explorerToolWindowPlace, actionGroup)
+                    val actions = DefaultActionGroup(totalActions)
+                    if (actions.childrenCount > 0) {
+                        val popupMenu = actionManager.createActionPopupMenu(explorerToolWindowPlace, actions)
                         popupMenu.component.show(comp, x, y)
                     }
                 }

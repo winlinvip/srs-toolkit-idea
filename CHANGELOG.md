@@ -3,6 +3,9 @@
 # srs-toolkit-idea Changelog
 
 ## [Unreleased]
+### Added
+- Add create SRS server dialog.
+
 ## [0.0.15] - 2021-06-07
 ### Added
 - Explorer service and node.
