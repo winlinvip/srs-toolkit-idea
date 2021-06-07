@@ -3,19 +3,27 @@
 
 package net.ossrs.ideasrs.explorer
 
-import com.intellij.ide.projectView.TreeStructureProvider
-import com.intellij.ide.util.treeView.AbstractTreeStructureBase
-import com.intellij.openapi.actionSystem.ActionManager
-import com.intellij.openapi.components.ServiceManager
+import com.intellij.ide.util.treeView.NodeDescriptor
+import com.intellij.ide.util.treeView.NodeRenderer
 import com.intellij.openapi.Disposable
+import com.intellij.openapi.actionSystem.ActionManager
+import com.intellij.openapi.application.runInEdt
+import com.intellij.openapi.components.ServiceManager
 import com.intellij.openapi.project.DumbAware
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.ui.SimpleToolWindowPanel
 import com.intellij.openapi.wm.ToolWindow
 import com.intellij.openapi.wm.ToolWindowFactory
+import com.intellij.ui.ScrollPaneFactory
 import com.intellij.ui.components.panels.NonOpaquePanel
+import com.intellij.ui.tree.AsyncTreeModel
+import com.intellij.ui.tree.StructureTreeModel
+import com.intellij.ui.treeStructure.Tree
 import com.intellij.util.ui.UIUtil
 import net.ossrs.ideasrs.SrsBundle
+import javax.swing.JTree
+import javax.swing.tree.DefaultMutableTreeNode
+import javax.swing.tree.TreeModel
 
 class SrsExplorerFactory : ToolWindowFactory, DumbAware {
     override fun createToolWindowContent(project: Project, toolWindow: ToolWindow) {
@@ -41,16 +49,32 @@ class SrsExplorerFactory : ToolWindowFactory, DumbAware {
 }
 
 class SrsExplorerToolWindow(project: Project) : SimpleToolWindowPanel(true, true), Disposable {
-    private val treeUIWrapper = NonOpaquePanel()
+    private val treePanel = NonOpaquePanel()
     private val treeModel = SrsExplorerTreeModel(project)
+
+    private val structureTreeModel = StructureTreeModel(treeModel, this)
+    private val srsTree = createTree(AsyncTreeModel(structureTreeModel, true, this))
+    private val srsTreePanel = ScrollPaneFactory.createScrollPane(srsTree)
 
     init {
         background = UIUtil.getTreeBackground()
-        setContent(treeUIWrapper)
+        setContent(treePanel)
+
+        runInEdt {
+            treePanel.setContent(srsTreePanel)
+        }
+    }
+
+    private fun createTree(model: TreeModel): Tree {
+        val tree = Tree(model)
+        tree.isRootVisible = false
+        tree.autoscrolls = true
+        tree.cellRenderer = SrsTreeCellRenderer()
+
+        return tree
     }
 
     override fun dispose() {
-        TODO("Not yet implemented")
     }
 
     companion object {
@@ -60,20 +84,19 @@ class SrsExplorerToolWindow(project: Project) : SimpleToolWindowPanel(true, true
     }
 }
 
-class SrsExplorerTreeModel(project: Project) : AbstractTreeStructureBase(project) {
-    override fun getProviders(): MutableList<TreeStructureProvider>? {
-        TODO("Not yet implemented")
-    }
-
-    override fun getRootElement(): Any {
-        TODO("Not yet implemented")
-    }
-
-    override fun commit() {
-        TODO("Not yet implemented")
-    }
-
-    override fun hasSomethingToCommit(): Boolean {
-        TODO("Not yet implemented")
+class SrsTreeCellRenderer : NodeRenderer() {
+    override fun customizeCellRenderer(
+        tree: JTree,
+        value: Any?,
+        selected: Boolean,
+        expanded: Boolean,
+        leaf: Boolean,
+        row: Int,
+        hasFocus: Boolean
+    ) {
+        super.customizeCellRenderer(tree, value, selected, expanded, leaf, row, hasFocus)
+        if (value is DefaultMutableTreeNode && value.userObject is NodeDescriptor<*>) {
+            icon = (value.userObject as NodeDescriptor<*>).icon
+        }
     }
 }

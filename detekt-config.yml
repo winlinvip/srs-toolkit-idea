@@ -3,6 +3,17 @@
 
 formatting:
   Indentation:
-    continuationIndentSize: 8
+    continuationIndentSize: 4
   ParameterListWrapping:
-    indentSize: 8
+    active: false
+  Filename:
+    active: false
+
+empty-blocks:
+  EmptyFunctionBlock:
+    active: false
+
+naming:
+  active: true
+  MatchingDeclarationName:
+    active: false

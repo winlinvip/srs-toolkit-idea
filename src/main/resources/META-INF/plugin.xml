@@ -7,6 +7,7 @@
     <!-- https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
     <depends>com.intellij.modules.platform</depends>
 
+    <!--For extensions defined by intellij-->
     <extensions defaultExtensionNs="com.intellij">
         <applicationService serviceImplementation="net.ossrs.ideasrs.services.MyApplicationService"/>
         <projectService serviceImplementation="net.ossrs.ideasrs.services.MyProjectService"/>
@@ -19,6 +20,16 @@
         <webHelpProvider implementation="net.ossrs.ideasrs.explorer.SrsHelpIdTranslator"/>
     </extensions>
 
+    <!--For extensions defined by SRS explorer-->
+    <extensionPoints>
+        <extensionPoint name="explorer.services" interface="net.ossrs.ideasrs.explorer.SrsExplorerService" dynamic="true"/>
+    </extensionPoints>
+    <extensions defaultExtensionNs="net.ossrs.ideasrs">
+        <explorer.services implementation="net.ossrs.ideasrs.explorer.SrsExplorerServiceSRS"/>
+        <explorer.services implementation="net.ossrs.ideasrs.explorer.SrsExplorerServiceFFmpeg"/>
+    </extensions>
+
+    <!--For actions-->
     <actions>
         <action class="net.ossrs.ideasrs.explorer.SrsRefreshAction" id="srs.settings.refresh"/>
     </actions>

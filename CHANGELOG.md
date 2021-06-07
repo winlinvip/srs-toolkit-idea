@@ -3,11 +3,14 @@
 # srs-toolkit-idea Changelog
 
 ## [Unreleased]
-### CHANGED
+### Added
+- Explorer service and node.
+### Changed
 - Refine file names.
+- Disable some detekt warnings.
 
 ## [0.0.14] - 2021-06-06
-### CHANGED
+### Changed
 - Rename MyBundle to SrsBundle.
 - Extract SrsExplorerToolWindow to file.
 ### Added
@@ -17,7 +20,7 @@
 - Add refresh SRS connection.
 
 ## [0.0.13] - 2021-06-06
-### CHANGED
+### Changed
 - Refine LICENSE with http://spdx.org/licenses/
 ### Added
 - Add SrsExplorer tool window.
