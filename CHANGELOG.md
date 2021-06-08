@@ -3,6 +3,7 @@
 # srs-toolkit-idea Changelog
 
 ## [Unreleased]
+## [0.0.17] - 2021-06-08
 ### Added
 - Background task and notifications.
 
