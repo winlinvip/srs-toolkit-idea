@@ -7,6 +7,7 @@ import com.intellij.icons.AllIcons
 import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent
 import com.intellij.openapi.actionSystem.LangDataKeys
+import com.intellij.openapi.progress.ProgressManager
 import com.intellij.openapi.project.DumbAwareAction
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.ui.DialogWrapper
@@ -36,8 +37,8 @@ class SrsCreateServerActionDialog(
     private val project: Project,
     parent: Component? = null
 ) : DialogWrapper(project, parent, false, IdeModalityType.PROJECT) {
-    val view = SrsCreateServerActionPanel()
-    val settings = SrsServerSettingsService.getInstance(project)
+    private val view = SrsCreateServerActionPanel()
+    private val settings = SrsServerSettingsService.getInstance(project)
 
     init {
         title = SrsBundle.message("srs.create.server.title")
@@ -53,6 +54,7 @@ class SrsCreateServerActionDialog(
 
     override fun doOKAction() {
         settings.state.home = view.serverName.text
+        ProgressManager.getInstance().run(SrsBuildServerTask(project, settings.state.home.toString()))
         super.doOKAction()
     }
 }

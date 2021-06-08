@@ -26,3 +26,6 @@ class SrsHelpIdTranslator : WebHelpProvider() {
         }
     }
 }
+
+// For all notifications or balloons.
+const val NOTIFICATION_GROUP_ID = "SRS Toolkit"

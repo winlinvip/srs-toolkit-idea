@@ -3,11 +3,18 @@
 
 package net.ossrs.ideasrs
 
+import com.intellij.notification.Notification
+import com.intellij.notification.NotificationType
+import com.intellij.notification.Notifications.Bus.notify
 import com.intellij.openapi.components.PersistentStateComponent
 import com.intellij.openapi.components.ServiceManager
 import com.intellij.openapi.components.State
 import com.intellij.openapi.components.Storage
+import com.intellij.openapi.progress.ProgressIndicator
+import com.intellij.openapi.progress.Task
 import com.intellij.openapi.project.Project
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.runBlocking
 
 interface SrsExplorerService {
     val serviceId: String
@@ -60,5 +67,28 @@ class SrsServerSettingsService : PersistentStateComponent<SrsServerSettingsServi
         fun getInstance(project: Project): SrsServerSettingsService {
             return ServiceManager.getService(project, SrsServerSettingsService::class.java)
         }
+    }
+}
+
+class SrsBuildServerTask(project: Project, val home: String) :
+    Task.Backgroundable(project, SrsBundle.message("srs.build.task", home), true) {
+
+    override fun run(indicator: ProgressIndicator) = runBlocking {
+        indicator.fraction = 0.0
+        while (indicator.fraction < 1.0) {
+            indicator.checkCanceled()
+            indicator.fraction += 0.2
+            delay(1000)
+        }
+
+        notify(
+            Notification(
+                NOTIFICATION_GROUP_ID,
+                SrsBundle.message("srs.build.title"),
+                SrsBundle.message("srs.build.done", home),
+                NotificationType.INFORMATION
+            ),
+            project
+        )
     }
 }

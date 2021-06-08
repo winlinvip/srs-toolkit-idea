@@ -3,6 +3,9 @@
 # srs-toolkit-idea Changelog
 
 ## [Unreleased]
+### Added
+- Background task and notifications.
+
 ## [0.0.16] - 2021-06-08
 ### Removed
 - Eliminate the unused listeners and services.
