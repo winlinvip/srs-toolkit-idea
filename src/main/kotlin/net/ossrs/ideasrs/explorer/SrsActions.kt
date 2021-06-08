@@ -38,10 +38,12 @@ class SrsCreateServerActionDialog(
     parent: Component? = null
 ) : DialogWrapper(project, parent, false, IdeModalityType.PROJECT) {
     val view = SrsCreateServerActionPanel()
+    val settings = SrsServerSettingsService.getInstance(project)
 
     init {
         title = SrsBundle.message("srs.create.server.title")
         setOKButtonText(SrsBundle.message("srs.create.server.create"))
+        view.serverName.text = settings.state.home
 
         init()
     }
@@ -51,6 +53,8 @@ class SrsCreateServerActionDialog(
     override fun getPreferredFocusedComponent(): JComponent? = view.serverName
 
     override fun doOKAction() {
+        settings.state.home = view.serverName.text
+        super.doOKAction()
     }
 }
 

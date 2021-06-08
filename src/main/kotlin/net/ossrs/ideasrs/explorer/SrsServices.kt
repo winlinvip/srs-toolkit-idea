@@ -3,6 +3,10 @@
 
 package net.ossrs.ideasrs.explorer
 
+import com.intellij.openapi.components.PersistentStateComponent
+import com.intellij.openapi.components.ServiceManager
+import com.intellij.openapi.components.State
+import com.intellij.openapi.components.Storage
 import com.intellij.openapi.project.Project
 import net.ossrs.ideasrs.SrsBundle
 
@@ -37,5 +41,25 @@ class SrsExplorerNodeFFmpeg(project: Project, service: SrsExplorerServiceFFmpeg)
     override fun isAlwaysShowPlus(): Boolean = true
     override fun getChildren(): List<SrsExplorerNode<*>> {
         return emptyList()
+    }
+}
+
+@State(name = "server", storages = [Storage("srs.xml")])
+class SrsServerSettingsService : PersistentStateComponent<SrsServerSettingsService.State> {
+    class State {
+        var home: String? = null
+    }
+    private var myState = State()
+
+    override fun getState() = myState
+
+    override fun loadState(state: State) {
+        myState = state
+    }
+
+    companion object {
+        fun getInstance(project: Project): SrsServerSettingsService {
+            return ServiceManager.getService(project, SrsServerSettingsService::class.java)
+        }
     }
 }

@@ -6,6 +6,7 @@
 ### Removed
 - Eliminate the unused listeners and services.
 ### Added
+- Add persistence for SRS server settings.
 - Add create SRS server dialog.
 
 ## [0.0.15] - 2021-06-07

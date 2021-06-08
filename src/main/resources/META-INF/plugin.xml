@@ -9,11 +9,12 @@
 
     <!--For extensions defined by intellij-->
     <extensions defaultExtensionNs="com.intellij">
+        <!--The project service to store SRS data-->
+        <projectService serviceImplementation="net.ossrs.ideasrs.explorer.SrsServerSettingsService"/>
         <!--SRS explorer is a tool window-->
         <projectService serviceImplementation="net.ossrs.ideasrs.explorer.SrsExplorerToolWindow"/>
-        <toolWindow id="srs.explorer" anchor="left" secondary="true"
-            factoryClass="net.ossrs.ideasrs.explorer.SrsExplorerFactory"
-            icon="SrsIcons.Logos.SRS"/>
+        <toolWindow id="srs.explorer" anchor="left" secondary="true" icon="SrsIcons.Logos.SRS"
+            factoryClass="net.ossrs.ideasrs.explorer.SrsExplorerFactory"/>
         <!--For help ID translation-->
         <webHelpProvider implementation="net.ossrs.ideasrs.explorer.SrsHelpIdTranslator"/>
     </extensions>
