@@ -10,6 +10,9 @@
 
 **Not release yet, not available, please wait!!!**
 
+SRS开发套件是一个Jetbrains IDEA的插件，是为了更方便集成和使用SRS和FFmpeg等音视频工具，目标用户不是SRS的开发者而是使用和集成商，
+也就是将音视频能力集成到自己的领域的开发者，一般可能用Java或Nodejs多一些。
+
 SRS Toolkit for IDEA is a plugin for JetBrains IDEs that make it easier to write applications built 
 on [SRS](https://github.com/ossrs/srs) server.
 

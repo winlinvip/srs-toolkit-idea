@@ -73,6 +73,7 @@ class SrsServerSettingsService : PersistentStateComponent<SrsServerSettingsServi
 class SrsBuildServerTask(project: Project, val home: String) :
     Task.Backgroundable(project, SrsBundle.message("srs.build.task", home), true) {
 
+    @Suppress("MagicNumber")
     override fun run(indicator: ProgressIndicator) = runBlocking {
         indicator.fraction = 0.0
         while (indicator.fraction < 1.0) {
