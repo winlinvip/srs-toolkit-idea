@@ -3,6 +3,7 @@
 # srs-toolkit-idea Changelog
 
 ## [Unreleased]
+## [0.0.16] - 2021-06-08
 ### Removed
 - Eliminate the unused listeners and services.
 ### Added
