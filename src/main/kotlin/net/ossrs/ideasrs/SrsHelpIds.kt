@@ -1,7 +1,7 @@
 // Copyright (c) 2021 Winlin
 // SPDX-License-Identifier: MIT
 
-package net.ossrs.ideasrs.explorer
+package net.ossrs.ideasrs
 
 import com.intellij.openapi.help.WebHelpProvider
 

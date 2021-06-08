@@ -1,14 +1,13 @@
 // Copyright (c) 2021 Winlin
 // SPDX-License-Identifier: MIT
 
-package net.ossrs.ideasrs.explorer
+package net.ossrs.ideasrs
 
 import com.intellij.openapi.components.PersistentStateComponent
 import com.intellij.openapi.components.ServiceManager
 import com.intellij.openapi.components.State
 import com.intellij.openapi.components.Storage
 import com.intellij.openapi.project.Project
-import net.ossrs.ideasrs.SrsBundle
 
 interface SrsExplorerService {
     val serviceId: String
@@ -27,7 +26,7 @@ class SrsExplorerNodeSRS(project: Project, service: SrsExplorerServiceSRS) :
     override fun getChildren(): List<SrsExplorerNode<*>> {
         return emptyList()
     }
-    override fun actionGroupName() = "net.ossrs.ideasrs.explorer.srs"
+    override fun actionGroupName() = "net.ossrs.ideasrs.srs"
 }
 
 class SrsExplorerServiceFFmpeg : SrsExplorerService {

@@ -1,7 +1,7 @@
 // Copyright (c) 2021 Winlin
 // SPDX-License-Identifier: MIT
 
-package net.ossrs.ideasrs.explorer
+package net.ossrs.ideasrs
 
 import com.intellij.ide.projectView.PresentationData
 import com.intellij.ide.projectView.TreeStructureProvider
@@ -59,7 +59,7 @@ class SrsTreeCellRenderer : NodeRenderer() {
 
 class SrsExplorerRootNode(private val nodeProject: Project) : AbstractTreeNode<Any>(nodeProject, Object()) {
     override fun getChildren(): List<SrsExplorerNode<*>> {
-        val endpoints = ExtensionPointName<SrsExplorerService>("net.ossrs.ideasrs.explorer.services")
+        val endpoints = ExtensionPointName<SrsExplorerService>("net.ossrs.ideasrs.services")
         val nodes = endpoints.extensionList.map { it.buildNode(nodeProject) }
         return nodes
     }

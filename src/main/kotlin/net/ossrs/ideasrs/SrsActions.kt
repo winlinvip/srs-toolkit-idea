@@ -1,7 +1,7 @@
 // Copyright (c) 2021 Winlin
 // SPDX-License-Identifier: MIT
 
-package net.ossrs.ideasrs.explorer
+package net.ossrs.ideasrs
 
 import com.intellij.icons.AllIcons
 import com.intellij.openapi.actionSystem.AnAction
@@ -10,13 +10,12 @@ import com.intellij.openapi.actionSystem.LangDataKeys
 import com.intellij.openapi.project.DumbAwareAction
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.ui.DialogWrapper
-import net.ossrs.ideasrs.SrsBundle
 import java.awt.Component
 import javax.swing.JComponent
 import javax.swing.JPanel
 import javax.swing.JTextField
 
-class SrsRefreshAction(text: String = SrsBundle.message("settings.refresh.description")) :
+class SrsRefreshAction(text: String = SrsBundle.message("explorer.refresh.description")) :
     AnAction(text, null, AllIcons.Actions.Refresh) {
     override fun actionPerformed(e: AnActionEvent) {
         TODO("Not yet implemented")

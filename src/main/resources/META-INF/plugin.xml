@@ -10,32 +10,32 @@
     <!--For extensions defined by intellij-->
     <extensions defaultExtensionNs="com.intellij">
         <!--The project service to store SRS data-->
-        <projectService serviceImplementation="net.ossrs.ideasrs.explorer.SrsServerSettingsService"/>
+        <projectService serviceImplementation="net.ossrs.ideasrs.SrsServerSettingsService"/>
         <!--SRS explorer is a tool window-->
-        <projectService serviceImplementation="net.ossrs.ideasrs.explorer.SrsExplorerToolWindow"/>
+        <projectService serviceImplementation="net.ossrs.ideasrs.SrsExplorerToolWindow"/>
         <toolWindow id="srs.explorer" anchor="left" secondary="true" icon="SrsIcons.Logos.SRS"
-            factoryClass="net.ossrs.ideasrs.explorer.SrsExplorerFactory"/>
+            factoryClass="net.ossrs.ideasrs.SrsExplorerFactory"/>
         <!--For help ID translation-->
-        <webHelpProvider implementation="net.ossrs.ideasrs.explorer.SrsHelpIdTranslator"/>
+        <webHelpProvider implementation="net.ossrs.ideasrs.SrsHelpIdTranslator"/>
     </extensions>
 
     <!--For extensions defined by SRS explorer-->
     <extensionPoints>
-        <extensionPoint name="explorer.services" interface="net.ossrs.ideasrs.explorer.SrsExplorerService" dynamic="true"/>
+        <extensionPoint name="services" interface="net.ossrs.ideasrs.SrsExplorerService" dynamic="true"/>
     </extensionPoints>
     <extensions defaultExtensionNs="net.ossrs.ideasrs">
-        <explorer.services implementation="net.ossrs.ideasrs.explorer.SrsExplorerServiceSRS"/>
-        <explorer.services implementation="net.ossrs.ideasrs.explorer.SrsExplorerServiceFFmpeg"/>
+        <services implementation="net.ossrs.ideasrs.SrsExplorerServiceSRS"/>
+        <services implementation="net.ossrs.ideasrs.SrsExplorerServiceFFmpeg"/>
     </extensions>
 
     <!--For actions-->
     <actions>
         <!--Refresh action for SRS explorer-->
-        <action class="net.ossrs.ideasrs.explorer.SrsRefreshAction" id="srs.settings.refresh"/>
+        <action class="net.ossrs.ideasrs.SrsRefreshAction" id="srs.settings.refresh"/>
 
         <!--Actions for SRS server node-->
-        <group id="net.ossrs.ideasrs.explorer.srs" popup="false" compact="false">
-            <action id="srs.create.server" class="net.ossrs.ideasrs.explorer.SrsCreateServerAction"/>
+        <group id="net.ossrs.ideasrs.srs" popup="false" compact="false">
+            <action id="srs.create.server" class="net.ossrs.ideasrs.SrsCreateServerAction"/>
         </group>
     </actions>
 </idea-plugin>

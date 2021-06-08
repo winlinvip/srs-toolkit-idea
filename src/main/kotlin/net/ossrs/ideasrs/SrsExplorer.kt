@@ -1,7 +1,7 @@
 // Copyright (c) 2021 Winlin
 // SPDX-License-Identifier: MIT
 
-package net.ossrs.ideasrs.explorer
+package net.ossrs.ideasrs
 
 import com.intellij.openapi.Disposable
 import com.intellij.openapi.actionSystem.ActionGroup
@@ -24,7 +24,6 @@ import com.intellij.ui.tree.AsyncTreeModel
 import com.intellij.ui.tree.StructureTreeModel
 import com.intellij.ui.treeStructure.Tree
 import com.intellij.util.ui.UIUtil
-import net.ossrs.ideasrs.SrsBundle
 import java.awt.Component
 import java.awt.event.MouseEvent
 import javax.swing.tree.DefaultMutableTreeNode
