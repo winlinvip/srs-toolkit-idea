@@ -23,8 +23,9 @@ class SrsRefreshAction(text: String = SrsBundle.message("settings.refresh.descri
     }
 }
 
+// For icon, see https://jetbrains.design/intellij/resources/icons_list/
 class SrsCreateServerAction :
-    DumbAwareAction(SrsBundle.message("srs.create.server.title"), null, AllIcons.Actions.New) {
+    DumbAwareAction(SrsBundle.message("srs.create.server.title"), null, AllIcons.General.Add) {
     override fun actionPerformed(e: AnActionEvent) {
         val project = e.getRequiredData(LangDataKeys.PROJECT)
         val dialog = SrsCreateServerActionDialog(project)

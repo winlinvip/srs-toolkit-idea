@@ -16,6 +16,7 @@ import com.intellij.openapi.project.Project
 import com.intellij.openapi.ui.SimpleToolWindowPanel
 import com.intellij.openapi.wm.ToolWindow
 import com.intellij.openapi.wm.ToolWindowFactory
+import com.intellij.ui.DoubleClickListener
 import com.intellij.ui.PopupHandler
 import com.intellij.ui.ScrollPaneFactory
 import com.intellij.ui.components.panels.NonOpaquePanel
@@ -25,6 +26,7 @@ import com.intellij.ui.treeStructure.Tree
 import com.intellij.util.ui.UIUtil
 import net.ossrs.ideasrs.SrsBundle
 import java.awt.Component
+import java.awt.event.MouseEvent
 import javax.swing.tree.DefaultMutableTreeNode
 import javax.swing.tree.TreeModel
 
@@ -75,11 +77,20 @@ class SrsExplorerToolWindow(project: Project) : SimpleToolWindowPanel(true, true
         tree.autoscrolls = true
         tree.cellRenderer = SrsTreeCellRenderer()
 
+        object : DoubleClickListener() {
+            override fun onDoubleClick(event: MouseEvent): Boolean {
+                val path = tree.getClosestPathForLocation(event.x, event.y)
+                val node = path?.lastPathComponent as? DefaultMutableTreeNode
+                (node?.userObject as? SrsExplorerNode<*>)?.onDoubleClick()
+                return true
+            }
+        }.installOn(tree)
+
         tree.addMouseListener(
             object : PopupHandler() {
                 override fun invokePopup(comp: Component?, x: Int, y: Int) {
                     val explorerNode = getSelectedNodesSameType<SrsExplorerNode<*>>()?.get(0) ?: return
-                    val actionGroupName = (explorerNode as? SrsResourceActionNode)?.actionGroupName()
+                    val actionGroupName = (explorerNode as? SrsExplorerActionNode)?.actionGroupName()
 
                     val totalActions = mutableListOf<AnAction>()
 

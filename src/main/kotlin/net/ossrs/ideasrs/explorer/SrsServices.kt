@@ -17,7 +17,7 @@ class SrsExplorerServiceSRS : SrsExplorerService {
 }
 
 class SrsExplorerNodeSRS(project: Project, service: SrsExplorerServiceSRS) :
-    SrsExplorerNode<SrsExplorerService>(project, service, null), SrsResourceActionNode {
+    SrsExplorerNode<SrsExplorerService>(project, service, null), SrsExplorerActionNode {
     override fun displayName(): String = SrsBundle.message("explorer.node.srs")
     override fun isAlwaysShowPlus(): Boolean = true
     override fun getChildren(): List<SrsExplorerNode<*>> {
